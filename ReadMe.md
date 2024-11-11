@@ -66,6 +66,11 @@ amazon-nl-testing/
   npx playwright test --project=Chromium
   ```
 
+## Test report
+
+- Once the tests are run, html report is generated in the folder `reports` and you can open `index.html` and it shows the  report
+- In case of failed tests, the report also records screenshot, video and traces for the failed tests.
+
 ## Continuous Integration
 
 This project is integrated with GitHub Actions. The workflow file (`.github/workflows/e2e-tests.yml`) is configured to run on every push to the `main` branch. After the tests, it uploads the html test report to GitHub Actions artifacts.
