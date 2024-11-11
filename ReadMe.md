@@ -36,6 +36,10 @@ amazon-nl-testing/
   ```bash
   yarn install
   ```
+- Duplicate `.env.example` and rename it to `.env`
+  - add your test amazon.nl `user email`
+  - add your test amazon.nl `password`
+  - add your test amazon.nl `first name` of the user
 
 ## Running the tests
 
