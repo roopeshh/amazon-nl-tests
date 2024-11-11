@@ -26,6 +26,10 @@ jobs:
         run: npx playwright install --with-deps
 
       - name: Run E2E tests
+        env:
+          USERNAME: ${{ secrets.USERNAME }}
+          PASSWORD: ${{ secrets.PASSWORD }}
+          FIRSTNAME: ${{ vars.FIRSTNAME }}
         run: yarn test
 
       - name: Upload test results
