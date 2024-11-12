@@ -5,7 +5,7 @@ import { config } from '../config/config';
 export default class CartPage extends BasePage {
   readonly checkoutAddressCountry: Locator;
   readonly checkoutAddressName: Locator;
-  
+
   constructor(page: Page) {
     super(page);
     this.checkoutAddressCountry = page.locator('#address-ui-widgets-countryCode');
@@ -15,11 +15,11 @@ export default class CartPage extends BasePage {
   async goBackToCart() {
     await this.goBack();
   }
-  
+
   async verifyCheckoutForm() {
     const addressCountry = await this.checkoutAddressCountry.textContent();
     const addressName = await this.checkoutAddressName.textContent();
     expect(addressCountry).toContain('Nederland');
-    expect(addressName).toContain(config.firstName)
+    expect(addressName).toContain(config.firstName);
   }
 }

@@ -1,10 +1,9 @@
 import { test } from '@playwright/test';
 import HomePage from '../pages/home-page';
 import LoginPage from '../pages/login-page';
-import { config } from '../config/config'
+import { config } from '../config/config';
 
 test.describe('Login', () => {
-
   let homePage: HomePage;
   let loginPage: LoginPage;
 
@@ -21,7 +20,7 @@ test.describe('Login', () => {
     // Go to the login page and login
     await homePage.clickOnLoginNavigationLink();
     await loginPage.login(config.username, config.password);
-    
+
     // Verify the user is logged in
     await homePage.verifyUserIsLoggedIn();
   });

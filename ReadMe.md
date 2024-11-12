@@ -68,7 +68,7 @@ amazon-nl-testing/
 
 ## Test report
 
-- Once the tests are run, html report is generated in the folder `reports` and you can open `index.html` and it shows the  report
+- Once the tests are run, html report is generated in the folder `reports` and you can open `index.html` and it shows the report
 - In case of failed tests, the report also records screenshot, video and traces for the failed tests.
 
 ## Continuous Integration

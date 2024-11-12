@@ -9,7 +9,7 @@ export default class CartPage extends BasePage {
   constructor(page: Page) {
     super(page);
     this.proceedToCheckoutButton = page.locator('[data-feature-id="proceed-to-checkout-action"]');
-    this.productTitles = page.locator('ul.sc-item-content-list[role="presentation"]')
+    this.productTitles = page.locator('ul.sc-item-content-list[role="presentation"]');
     this.deleteItem = page.locator('[data-feature-id="item-delete-button"]');
   }
 

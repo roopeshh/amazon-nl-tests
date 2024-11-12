@@ -1,11 +1,11 @@
-import { test, expect } from '@playwright/test';
+import { test } from '@playwright/test';
 import HomePage from '../pages/home-page';
 import LoginPage from '../pages/login-page';
 import SearchResultsPage from '../pages/search-results-page';
 import ProductPage from '../pages/product-page';
 import CartPage from '../pages/cart-page';
 import CheckoutPage from '../pages/checkout-page';
-import { config } from '../config/config'
+import { config } from '../config/config';
 
 test.describe('Checkout', () => {
   let homePage: HomePage;
@@ -30,8 +30,7 @@ test.describe('Checkout', () => {
     await homePage.verifyUserIsLoggedIn();
   });
 
-
-  test('add a product to cart and checkout', async ({ page }) => {
+  test('add a product to cart and checkout', async () => {
     await homePage.searchForProduct('apple iphone 16 pro');
     await searchResultsPage.verifySearchResults('apple iphone 16 pro');
     await searchResultsPage.selectFirstProduct();
@@ -42,9 +41,8 @@ test.describe('Checkout', () => {
     await checkoutPage.verifyCheckoutForm();
   });
 
-  test.afterEach(async ({ page }) => {
+  test.afterEach(async () => {
     await checkoutPage.goBackToCart();
     await cartPage.deleteItemFromCart();
   });
-
 });
